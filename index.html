@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FakeStore</title>
+  <title>amazon</title>
   <link rel="stylesheet" href="./css/style.css" />
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -18,23 +18,30 @@
 </head>
 
 <body>
-  <header></header>
+  <header class="m-5"></header>
   <main class="main">
-    <div class="search-field">
-      <div class="search-box">
-        <input id="input-field" class="search-field" type="text" />
-        <button type="button" class="btn btn-primary search-button" data-toggle="button" aria-pressed="false"
-          autocomplete="off" id="search-btn" onclick="loadProducts()">
-          Search
-        </button>
-      </div>
+
+     <!-- search input and click button  -->
+     <div class="input-group mb-3 w-50 mx-auto">
+
+         <input id="input-field" type="text" class="form-control  fs-5 p-3" placeholder="enter product name..." aria-label="Recipient's username" aria-describedby="button-addon2">
+
+         <button onclick="loadProducts()" class="btn btn-outline-primary fs-5 fw-bold p-3 ms-2" type="button" id="button-submit">Search</button>
+
     </div>
+    
     <div class="row">
+
+      <!-- display search product result  -->
       <div class="col-md-9 col-lg-9 col-sm-7">
         <div id="all-products" class="">
-          <h1></h1>
+
+          <!-- now 1st row will show 3 columns  -->
+
         </div>
       </div>
+
+         <!-- product cart part  -->
       <div class="col-md-3 col-lg-3 col-sm-5 cart-main">
         <div class="cart" id="my-cart">
           <table class="table">
@@ -50,7 +57,8 @@
             <tbody>
               <tr>
                 <th>Total Added-Products:</th>
-                <td>$ <span id="total-Products">0</span></td>
+                <!-- total added products $dollar sign removed  -->
+                <td><span id="total-Products">0</span></td>
                 <td></td>
                 <td></td>
               </tr>
@@ -62,7 +70,7 @@
               </tr>
               <tr>
                 <th>Delivery-Charge:</th>
-                <td>$ <span id="delivery-charge">20</span></td>
+                <td>$ <span id="delivery-charge">0</span></td>
                 <td></td>
                 <td></td>
               </tr>
